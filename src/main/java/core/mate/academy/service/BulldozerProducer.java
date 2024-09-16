@@ -1,7 +1,7 @@
 package core.mate.academy.service;
 
-import java.util.ArrayList;
 import core.mate.academy.model.Bulldozer;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {

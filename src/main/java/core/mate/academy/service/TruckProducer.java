@@ -1,7 +1,7 @@
 package core.mate.academy.service;
 
-import java.util.ArrayList;
 import core.mate.academy.model.Truck;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
