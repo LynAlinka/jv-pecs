@@ -12,18 +12,16 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     public List<T> getAll(Class<? extends T> type) {
         List<T> result = new ArrayList<>();
 
-        if (type == Bulldozer.class) {
-            List<Bulldozer> bulldozers = new BulldozerProducer().get();
-            result.addAll((List<T>) bulldozers);
+        if (type.equals(Bulldozer.class)) {
+            result = (List<T>) new BulldozerProducer().get();
         }
-        if (type == Excavator.class) {
-            List<Excavator> excavators = new ExcavatorProducer().get();
-            result.addAll((List<T>) excavators);
+        if (type.equals(Excavator.class)) {
+            result = (List<T>) new ExcavatorProducer().get();
         }
-        if (type == Truck.class) {
-            List<Truck> trucks = new TruckProducer().get();
-            result.addAll((List<T>) trucks);
+        if (type.equals(Truck.class)) {
+            result = (List<T>) new TruckProducer().get();
         }
+
         return result;
     }
 
